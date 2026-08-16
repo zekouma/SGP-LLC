@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard SGP/LLC</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <h3 style="color:yellow">SGP/LLC - {{role}}</h3>
+        <span style="color:white">{{nom}}</span>
+        <a href="/logout">Déconnexion</a>
+    </nav>
+
+    <div class="container">
+        <form method="GET" class="search-bar">
+            <input type="text" name="search" placeholder="🔍 Recher Nom, Tel, N° Dossier, Type..." value="{{search}}">
+            <button>Recher</button>
+        </form>
+
+        <div class="cartes">
+            {% for p in plaintes %}
+            <div class="carte">
+                <h4>DOSSIER N°{{p.id}} - {{p.statut}}</h4>
+                <p><b>Nom:</b> {{p.nom_plaignant}}</p>
+                <p><b>Tel:</b> {{p.tel}}</p>
+                <p><b>Type:</b> {{p.type_plainte}}</p>
+                <p><b>Date:</b> {{p.date}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

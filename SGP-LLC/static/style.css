@@ -1,0 +1,12 @@
+body { background-color: #002366; color: white; font-family: Arial; margin:0; }
+nav { background: #001a4d; padding: 10px; display:flex; justify-content:space-between; align-items:center; }
+button { background: yellow; color: #002366; border:none; padding:10px 15px; font-weight:bold; cursor:pointer; }
+input { padding:10px; width:100%; margin:5px 0; border-radius:5px; border:none; }
+.search-bar { display:flex; gap:10px; margin-bottom:15px; }
+.carte { background: #003399; margin:10px 0; padding:15px; border-left: 5px solid yellow; border-radius:5px; }
+.box { width:320px; margin:100px auto; background:#003399; padding:25px; text-align:center; border-radius:10px; }
+
+/* MOBILE : Mode Carte */
+@media (max-width: 768px) {
+   .search-bar { flex-direction: column; }
+}
